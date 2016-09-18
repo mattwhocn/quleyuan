@@ -1,0 +1,25 @@
+如果一个模块不依赖其他模块，那么可以直接定义在define()函数之中。
+假定现在有一个math.js文件，它定义了一个math模块。那么，math.js就要这样写：
+
+// math.js
+　　define(function (){
+　　　　var add = function (x,y){
+　　　　　　return x+y;
+　　　　};
+　　　　return {
+　　　　　　add: add
+　　　　};
+　　});
+
+
+
+require.config()接受一个配置对象，这个对象除了有前面说过的paths属性之外，还有一个shim属性，专门用来配置不兼容的模块。具体来说，每个模块要定义（1）exports值（输出的变量名），表明这个模块外部调用时的名称；（2）deps数组，表明该模块的依赖性。
+
+比如，jQuery的插件可以这样定义：
+
+shim: {
+　　　'jquery.scroll': {
+　　　　　deps: ['jquery'],
+　　　　　exports: 'jQuery.fn.scroll'
+　　　}
+　}

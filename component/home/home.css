@@ -1,0 +1,68 @@
+/*轮播图*/
+.swiper-container{
+	width: 16rem;
+	height: 7.65rem;
+	overflow: visible;
+	margin-bottom: 20px;
+}
+
+.in-carousel img{
+	width: 16rem;
+	height: 100%;
+	float: left;
+}
+.swiper-container .swiper-pagination{
+	bottom: -20px;
+	z-index: 999;
+}
+
+/*banner部分*/
+.banner-item{
+	height: 8rem;
+	padding:0; 
+}
+.banner-item:first-child{
+	border-right: 2px solid white;
+}
+.banner-item:last-child{
+	border-left: 2px solid white;
+}
+.banner-item a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.banner-item img{
+	width: 100%;
+	height: 100%;
+}
+
+#special{
+	width: 16rem;
+	height: 2.35rem;
+}
+#special p{
+	width: 3.2rem;
+	height: 1.5rem;
+	line-height: 1.45rem;
+	text-align: center;
+	color: #f1705a;
+	font-size: 0.75rem;
+	margin: 0.6rem auto;
+	border-top:2px solid #f1705a;
+	border-bottom:2px solid #f1705a;
+}
+/*列表部分*/
+#home-ul{
+	
+}
+.home-li{
+	width: 16rem;
+	height: 6.25rem;
+	margin-bottom: 0.5rem;
+}
+.home-li img{
+	width: 16rem;
+	height: 6.25rem;
+
+}

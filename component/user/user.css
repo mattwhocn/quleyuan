@@ -1,0 +1,73 @@
+#page4{
+	width: 100%;
+	height: 100%;
+}
+.user-wall{
+	width: 100%;
+	height: 8rem;
+	position: relative;
+}
+.blur{
+	width: 100%;
+	height: 7.5rem;
+	background-image: url(../../img/user.jpg);
+	background-size:100%;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+	border-bottom: 1px solid white;
+}
+.user-pic{
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	top: 1.5rem;
+	left: 6rem;
+	background: url(../../img/user.jpg);
+	background-size: cover;
+	border-radius: 50%;
+	-webkit-filter: none;
+}
+.two-d-code{
+	width: 2.4rem;
+	height: 1.3rem;
+	background: url(../../img/2d-code.png) no-repeat left center;
+	background-size: contain;
+	position: absolute;
+	top: 3rem;
+	right: 0;
+}
+.two-d-code p{
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	margin: 0;
+	text-indent:1.5rem; 
+}
+.bottom{
+	width: 100%;
+	height: 0.75rem;
+	background: white;
+	position: absolute;
+	bottom: 0rem;
+	background: #efefef;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+/*列表部分*/
+.li-item{
+	width: 85%;
+	height: 2.3rem;
+	margin: auto;
+	line-height: 2.3rem;
+	font-size: 0.75rem;
+	border-bottom:1px solid #dedede; 
+	background: white;
+	color: #5d5b5c;
+	background: url(../../img/arrow.png) no-repeat right center;
+	background-size: 0.5rem;
+}

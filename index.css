@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding:0;
+	font-family: "微软雅黑";
+}
+ul,ol,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1473747945_3497632.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1473747945_3497632.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1473747945_3497632.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1473747945_3497632.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1473747945_3497632.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+	font-family:"iconfont";
+	font-size:16px;
+	font-style:normal;
+}
+
+
+/*tab-bar*/
+#tab-bar{
+	width: 16rem;
+	height: 2.5rem;
+	border-top: 1px solid #cccccc;
+	position: fixed;
+	bottom: 0;
+}
+.tab-li{
+	float: left;
+	height: 100%;
+	width: 25%;
+}
+#tab-ul a:first-child span{
+	color: #f56e6a;
+}
+.tab-li span{
+	display: block;
+	text-align: center;
+	color: #9d8d9d;
+}
+.myicon{
+	font-size: 1.1rem;line-height: 1.3rem;
+}
+
+#content{
+	height: 25.9rem;
+	overflow: auto;
+}
