@@ -12,9 +12,14 @@ require.config({
 		backbone:'./lib/backbone',
 		swiper:'./lib/swiper-3.3.1.min',
 		text:'./lib/text',
-		css:'./lib/css'
+		css:'./lib/css',
+		iscroll:'./lib/iscroll',
+		lazyload:'./lib/jquery.lazyload'
 	},
 	shim:{	//shim可以不写
+		'lazyload':{
+			deps:['jquery'],
+		},
 		'index':{
 			deps:['jquery'],
 		},

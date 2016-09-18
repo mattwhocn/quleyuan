@@ -1,5 +1,5 @@
 //定义home模块
-define(['text!./home.html','css!./home.css','swiper'],function(content,css){
+define(['text!./home.html','css!./home.css','swiper','lazyload'],function(content,css){
 	// console.log(content);
 	function render(){
 		$('#content').html(content);
@@ -58,14 +58,22 @@ define(['text!./home.html','css!./home.css','swiper'],function(content,css){
 		function setList(arr){
 			for (var i = 0; i < arr.length; i++) {
 				// console.log(arr[i]);
-
 				var obj = arr[i];
-				var liObj = $('<li class = "home-li"><a href="http://www.baidu.com"><img src="" alt=""></a></li>');
-				liObj.find('img').attr('src',obj.img);
+				var liObj = $('<li class = "home-li"><a href="http://www.baidu.com"><img class = "lazy" src="" data-original="" alt="" ></a></li>');
+				// liObj.find('img').attr('src',obj.img);
+				liObj.find('img').attr('data-original',obj.img);
 				liObj.find('img').attr('alt',obj.img);
 				$('#home-ul').append(liObj);
 			}
+			//设置懒加载
+			$('.lazy').lazyload({
+				effect: "fadeIn",
+				effectspeed: "1000",
+				// event:'click'
+			});
+
 		}
+		
 	}
 
 

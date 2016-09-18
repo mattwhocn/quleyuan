@@ -1,9 +1,8 @@
-define(['text!./eden.html','css!./eden.css'],function(content,css){
+define(['text!./eden.html','css!./eden.css','iscroll'],function(content,css){
 	//返回html页面
 	function render(){
 		$('#content').html(content);
 	}
-
 	function getData(){
 		$.ajax({
 			url: 'http://duif.applinzi.com/leyuan/leyuan_data.php?address=全城',
@@ -23,6 +22,9 @@ define(['text!./eden.html','css!./eden.css'],function(content,css){
 				liObj.find('.dist').text(obj.dist + "公里");
 				$('.eden-ul').append(liObj);
 			}
+
+
+
 		}
 	}
 	//设置点击标签出现蒙版

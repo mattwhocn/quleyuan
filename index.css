@@ -33,6 +33,7 @@ a{
 	border-top: 1px solid #cccccc;
 	position: fixed;
 	bottom: 0;
+	background: white;
 }
 .tab-li{
 	float: left;
@@ -52,6 +53,11 @@ a{
 }
 
 #content{
-	height: 25.9rem;
-	overflow: auto;
+	/*height: 25.9rem;*/
+	overflow: hidden;
+}
+
+.blank{
+	width: 16rem;
+	height: 2.5rem;
 }
