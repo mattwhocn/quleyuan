@@ -25,6 +25,9 @@ require.config({
 		},
 		'resize':{
 			deps:['jquery'],
+		},
+		'iscroll':{
+			exports:['iscroll']
 		}
 	},
 });

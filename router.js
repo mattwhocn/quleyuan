@@ -30,8 +30,8 @@ define(['backbone'],function(backbone){//第一个参数是添加依赖关系,�
 		edenfunc:function(){
 			require(['./component/eden/eden.js'],function(eden){
 				eden.render();
-				eden.getData();
-				eden.mask();
+				eden.getData('全城');
+				eden.showmask();
 			});
 		},
 		cardfunc:function(){
@@ -42,6 +42,7 @@ define(['backbone'],function(backbone){//第一个参数是添加依赖关系,�
 		userfunc:function(){
 			require(['./component/user/user.js'],function(user){
 				user.render();
+				user.tucaoevent();
 			});
 		},
 	});

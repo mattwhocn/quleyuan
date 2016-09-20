@@ -4,10 +4,18 @@
 	position: relative;
 }
 .eden-container{
-	padding:0; 
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+#nav-bar{
+	position: fixed;
+	width: 100%;
+	background: white;
 }
 .nav-item{
 	height: 2.4rem;
+
 	border-bottom: 2px solid white;
 }
 .nav-item:first-child{
@@ -17,13 +25,48 @@
 	display: inline-block;
 	width: 100%;
 	height: 100%;
+	margin: 0;
 	text-align: center;
 	line-height: 2.4rem;
 	font-size: 0.75rem;
 	color: black;
 }
 
+
+/*蒙版*/
+.mask{
+	width: 16rem;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 2.4rem;
+	background: rgba(90,90,90,0.8);
+	z-index: 9999;
+	display: none;
+}
+.mask .row{
+	margin: 0;
+}
+.classify-mask{
+	/*display: block;*/
+}
+.row-item{
+	background: white;
+	border-top: 1px solid #dddddd;
+}
+.in-item{
+	text-align: center;
+	height: 2rem;line-height: 2rem;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
+
+
+
 /*图文列表*/
+#eden-list{
+	margin-top: 2.4rem;
+}
 .eden-li{
 	width: 16rem;
 	height: 6.25rem;
@@ -63,31 +106,3 @@
 }
 
 
-/*蒙版*/
-.mask{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 2.4rem;
-	background: rgba(90,90,90,0.8);
-	z-index: 9999;
-	display: none;
-}
-
-
-/*每一项*/
-.mask-item{
-	border-top: 1px solid #ddd;
-	display: flex;
-	flex-wrap: wrap;
-	background: white;
-}
-
-.mask p{
-	margin: 0;
-	width: 33.3333%;
-	height: 2.15rem;line-height: 2.15rem;
-	text-align: center;
-	border-right: 1px solid #dddddd;
-	border-bottom: 1px solid #dddddd;
-}

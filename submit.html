@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>提交订单</title>
+	<script type="text/javascript" src="lib/jquery-2.1.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+			font-family: "微软雅黑";
+		}
+                    
+
+
+		/*本地*/
+        @font-face {font-family: 'iconfont';
+			src: url('iconfont/iconfont.eot'); /* IE9*/
+			src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+			url('iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+			url('iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+		}
+
+		.iconfont{
+			font-family:"iconfont" !important;
+			font-size:16px;font-style:normal;
+			-webkit-font-smoothing: antialiased;
+			-webkit-text-stroke-width: 0.2px;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		.my-icon{
+			margin-left: 0.5rem;
+			color: #595757;
+		}
+
+		ul,li{
+			list-style: none;
+		}
+		body,html{
+			width: 16rem;
+			height: 100%;
+		}
+		body{
+			position: relative;
+			background: #eeeeee;
+			padding: 0.1px;
+		}
+		#submit{
+			width: 16rem;
+			background: white;
+			padding: 0.5rem;
+			font-size: 0.75rem;
+			text-indent: 0.5rem;
+		}
+		.product{
+			width: 100%;
+			height: 3rem;line-height: 3rem;
+
+		}
+		.product-list{
+
+		}
+		.product-list li{
+			width: 100%;
+			height: 2rem;line-height: 2rem;
+			border-bottom: 1px solid #e5e5e5;
+			position: relative;
+		}
+		.right{
+			position: absolute;
+			right: 1rem;
+		}
+		input[type=text]{
+			border: none;
+			outline: none;
+			width: 6rem;
+			height: 1.8rem;
+			font-size:0.75rem;
+			text-align:right; 
+		}
+		#footer{
+			width: 16rem;
+			height: 2.5rem;
+			position: absolute;
+			bottom: 0;
+		}
+		.footer-item{
+			font-size: 0.75rem;
+			width: 50%;text-align:center; 
+			height: 100%;line-height: 2.5rem;
+			float: left;
+		}
+		.totle{
+			background: #e6e6e6;
+			color: #666
+		}
+		.pay-now{
+			color: white;
+			background: #ec6d65;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="submit">
+		<p class="product">新都乐享30次卡</p>
+		<ul class="product-list">
+			<li>
+				<p>数量：<span class="right">1</span></p>
+			</li>
+			<li>
+				<p>单价：<span class="right">1700.00</span></p>
+				
+			</li>
+			<li>
+				<p>联系方式：<span class="right"><input type="text" placeholder="187761832679"><i class="iconfont my-icon">&#xe601;</i></span></p>
+			</li>
+			<li>
+				<p>使用余额：<span  class="right">0.00<i class = "iconfont my-icon" id="chosen">&#xe600;</i></span></p>
+			</li>
+		</ul>
+	</div>
+	<div id="footer">
+		<div class="totle footer-item">实付款：<span>1700.00</span></div>
+		<div class="pay-now footer-item">立即支付</div>
+
+
+
+	</div>
+
+</body>
+<script type="text/javascript">
+	$(function(){
+		document.documentElement.style.fontSize = innerWidth/16 + 'px';
+		window.onresize = function(){
+			document.documentElement.style.fontSize = innerWidth/16 + 'px';
+		};
+	});
+</script>
+<script type="text/javascript">
+	$(function(){
+		var tag = true;
+		$('#chosen').click(function() {
+			if (tag) {
+				$(this).html('&#xe604;');
+			}else{
+				$(this).html('&#xe600;');
+			}
+			tag = !tag;
+		});
+
+
+
+	});	
+</script>
+</html>

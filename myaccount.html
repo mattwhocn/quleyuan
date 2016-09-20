@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>我的账户</title>
+	<script type="text/javascript" src="lib/jquery-2.1.1.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+			font-family: "微软雅黑";
+		}
+		ul,li{
+			list-style: none;
+		}
+		body,html{
+			width: 16rem;
+			height: 100%;
+		}
+		body{
+			background: #eaeaea;
+			padding: 0.1px;
+		}
+		#my-account{
+			width: 16rem;
+			height: 10rem;
+			background: white;
+			margin-top: 0.25rem;
+			border: 1px solid #ccc;
+			padding: 0.5rem;
+			font-size: 0.75rem;
+			color: #666666;
+		}
+		.yuan{
+			width: 16rem;
+			height: 4rem;line-height: 4rem;
+			font-size: 1.75rem;
+			text-align: center;
+		}
+		.yuan span{
+			font-size: 0.9rem;
+		}
+		.zhuan{
+			position: relative;
+			height: 2rem;
+			line-height: 2rem;
+		}
+		.zhuan-btn{
+			position: absolute;
+			right: 0;top: 0.2rem;
+			display: inline-block;
+			width: 4rem;text-align: center;
+			height: 1.5rem;line-height: 1.5rem;
+			color: #ec6d65;
+			border: 1px solid #ec6d65;
+			border-radius: 0.25rem;
+		}
+		.lebi{
+			width: 100%;
+			line-height:2rem; 
+		}
+		#detial{
+			width: 16rem;
+		}
+		.table-head{
+			width: 16rem;
+			height: 2rem;
+			background: white;
+			position: relative;
+		}
+		.table-head li{
+			float: left;
+			width: 8rem;text-align: center;
+			height: 2rem;line-height: 2rem;
+			font-size: 0.75rem;
+			border-bottom: 1px solid white;
+		}
+		.show{
+			position: absolute;
+			left: 0;
+			top: 2rem;
+			width: 16rem;
+			border-top: 1px solid #cccccc;
+			border-bottom: 1px solid #cccccc;
+			background: white;
+		}
+		.table-head .shuzhi-li{
+			border-bottom: 1px solid red;
+		}
+		.shuzhi-li p{
+			color: red;
+		}
+		.shuzhi{
+			display: block;
+
+		}
+		.shenqing{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="my-account">
+		<p class="yue">余额:</p>
+		<p class="yuan">15300.00<span>元</span></p>
+		<p class="zhuan">可转出余额：<span>0</span>元<span class="zhuan-btn">申请转出</span></p>
+		<p class="lebi">可用乐币：<span>0</span></p>
+	</div>
+	<div id="detial">
+		<ul class="table-head">
+			<li class="shuzhi-li">
+				<p>收支明细</p>
+				<div class="shuzhi show">没有数据</div>
+			</li>
+			<li class="shenqing-li">
+				<p>申请记录</p>
+				<div class="shenqing show">没有记录</div>
+			</li>
+		</ul>
+
+
+
+	</div>
+
+</body>
+<script type="text/javascript">
+	$(function(){
+		document.documentElement.style.fontSize = innerWidth/16 + 'px';
+		window.onresize = function(){
+			document.documentElement.style.fontSize = innerWidth/16 + 'px';
+		};
+	});
+</script>
+<script type="text/javascript">
+	$(function(){
+		$('.table-head li').click(function() {
+			$('.table-head li').css('border-bottom-color', 'white');
+			$('.table-head li').find('p').css('color', 'black');
+			$(this).css('border-bottom-color', 'red');
+			$(this).find('p').css('color', 'red');
+			$('.table-head li').find('.show').css('display', 'none');
+			$(this).find('.show').css('display', 'block');
+		});
+
+
+
+	});	
+</script>
+</html>

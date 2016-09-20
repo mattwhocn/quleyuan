@@ -1,6 +1,8 @@
 #page4{
 	width: 100%;
 	height: 100%;
+
+	position: relative;
 }
 .user-wall{
 	width: 100%;
@@ -67,7 +69,82 @@
 	font-size: 0.75rem;
 	border-bottom:1px solid #dedede; 
 	background: white;
-	color: #5d5b5c;
+	
 	background: url(../../img/arrow.png) no-repeat right center;
 	background-size: 0.5rem;
+}
+.li-item a{
+	text-decoration: none;
+	color: #5d5b5c; 
+}
+
+
+/*吐槽蒙版*/
+input,textarea{
+	outline: none;
+	resize: none;
+
+}
+
+
+#tucao-mask{
+	width: 100%;
+	height: 100%;
+	background: rgba(90,90,90,0.5);
+	position: fixed;
+	top: 0;
+	display: none;
+}
+.tucao-content{
+	width: 14.5rem;
+	height: 14.75rem;
+	margin: 2rem auto;
+	background: white;
+	border-radius: 0.3rem;
+	padding: 0.1px;
+}
+#text-area{
+	width: 12.8rem;
+	height: 7.5rem;
+	margin: 0.7rem auto;
+}
+#text-area textarea{
+	width: 12.8rem;
+	height: 7.5rem;
+	border: 1px solid #cccccc;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+}
+
+#contect-text{
+	width: 12.8rem;
+	height: 2rem;
+	margin: 0.7rem auto;
+}
+#contect-text input{
+	width: 12.8rem;
+	height: 2rem;
+	border: 1px solid #cccccc;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+}
+#buttons{
+	width: 12.8rem;
+	height: 2rem;
+	margin: 1rem auto;
+}
+#buttons div{
+	width: 6rem;
+	background: #ec6d65;
+	color: white;
+	text-align: center;
+	line-height: 2rem;
+	border-radius: 0.3rem ;
+}
+
+.cancle-btn{
+	float: left;
+}
+.sub-btn{
+	float: right;
 }
